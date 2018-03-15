@@ -38,25 +38,23 @@ var unansweredCount = 0;
 var totalQuestions = 8;
 var time = 30;
 
-
-
 //MAIN PROCESS
 //------------------------------------------------------------
 $(function () {
-    $("#questions").hide();
-    $("#results").hide();
     //waits for click event handler on START button to call function startGame()
     $("#startButton").on("click", function () {
+        
         //Testing
         console.log("start button clicked");
+        
         startGame();
-        //Testing
     });
     $("#endButton").on("click", function () {
-        //    //Testing
-        console.log("end button clicked");
-        endGame();
+        
         //Testing
+        console.log("end button clicked");
+       
+        endGame();
     });
 });
 
@@ -66,6 +64,7 @@ $(function () {
 function startGame() {
     //switches html in quizBoard to replace start button with question list
     //starts timer()
+
     //Testing
     console.log("startGame() ran");
 
@@ -74,10 +73,11 @@ function startGame() {
     window.setTimeout(endGame, 30000);
     timerInterval = setInterval(updateTime, 1000);
     $("#displayTimeRemain").text("Time Remaining: " + time);
+    
     //Testing
     console.log(time);
+    
     questionAnswerCount();
-
 }
 
 function updateTime() 
@@ -88,27 +88,31 @@ function updateTime()
 
     //testing
     console.log(time);
+
     if (time < 1) 
     {
         clearInterval(timerInterval);
-       
     }
 }
 
 function questionAnswerCount() {
     //waits for input event handler on questions
-    // $(".question").on("click", function ()
-    //     //Testing
+
+    //Testing
+
     // {   console.log (".question form clicked");
+
     //compares input to correct answers and tallies score
     $(".correct").on("click", function () {
         correctAnswerCount++;
+
         //Testing 
         console.log("correctAnswerCount= " + correctAnswerCount);
     });
 
     $(".incorrect").on("click", function () {
         incorrectAnswerCount++;
+
         //Testing 
         console.log("incorrectAnswerCount= " + incorrectAnswerCount);
     });
@@ -119,11 +123,13 @@ function questionAnswerCount() {
 
 function endGame() {
     //switches html in quizBoard div to display of results
-    //changes 
+    
     $("#questions").hide();
     $("#results").show();
+
     //Testing
     console.log("endGame() ran");
+    
     unansweredCount = (totalQuestions - correctAnswerCount - incorrectAnswerCount);
     $("#correctCountDisplay").text("Correct Answers: " + correctAnswerCount);
     $("#incorrectCountDisplay").text("Incorrect Answers: " + incorrectAnswerCount);
