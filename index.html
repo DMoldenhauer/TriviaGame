@@ -32,14 +32,102 @@
                 <h1>Tornado Trivia</h1>
             </div>
         </div>
-    <!-- bottom row that contains the start button/quiz/done -->
-    <div class="row">
+        <!-- bottom row that contains the start button/quiz/done -->
+        <div class="row">
             <div class="col-md-4 blankSpace">
 
             </div>
 
-            <div class="col-md-8 quizBoard">
-                <button type="button" class="btn btn-primary btn-lg">Start</button>
+            <div class="col-md-8" id="quizBoard">
+                <div id="buttonHolder">
+                    <button type="button" id="startButton" class="btn btn-primary btn-lg">Start</button>
+                </div>
+
+                <div id="questions">
+                    <p id="displayTimeRemain"></p>
+                    
+                    <br>
+                    <form class="question">
+                        Roughly, how many tornadoes hit the U.S. yearly?
+                        <br>
+                        <input class="incorrect" type="radio" name="tornadoes" value="12"> 12
+                        <input class="incorrect" type="radio" name="tornadoes" value="120"> 120
+                        <input class="correct" type="radio" name="tornadoes" value="1200"> 1200
+                        <input class="incorrect" type="radio" name="tornadoes" value="12000"> 12000
+                    </form>
+                    <br>
+                    <form class="question">
+                        Average distance a tornado travels?
+                        <br>
+                        <input class="incorrect" type="radio" name="tornadoes" value="550 feet"> 550 feet
+                        <input class="correct" type="radio" name="tornadoes" value="3.5 miles"> 3.5 miles
+                        <input class="incorrect"  type="radio" name="tornadoes" value="10 miles"> 10 miles
+                        <input class="incorrect" type="radio" name="tornadoes" value="30 miles"> 30 miles
+                    </form>
+                    <br>
+                    <form class="question">
+                        In the Northern Hemisphere, most tornadoes rotate:?
+                        <br>
+                        <input class="correct" type="radio" name="tornadoes" value="left to right"> left to right
+                        <input class="incorrect" type="radio" name="tornadoes" value="right to left"> right to left
+                        <input class="incorrect" type="radio" name="tornadoes" value="varies by season"> varies by season
+                        <input class="incorrect" type="radio" name="tornadoes" value="nobody knows"> nobody knows
+                    </form>
+                    <br>
+                    <form class="question">
+                        What's the safest place to be during a tornado?
+                        <br>
+                        <input class="incorrect" type="radio" name="tornadoes" value="your car"> your car
+                        <input class="incorrect" type="radio" name="tornadoes" value="a stadium"> a stadium
+                        <input class="correct" type="radio" name="tornadoes" value="the basement"> the basement
+                        <input class="incorrect" type="radio" name="tornadoes" value="2nd floor"> 2nd floor
+                    </form>
+                    <br>
+                    <form class="question">
+                        Scale used to estimate winds by tornado damage: ?
+                        <br>
+                        <input class="incorrect" type="radio" name="tornadoes" value="Saffir-Simpson Scale"> Saffir-Simpson Scale
+                        <input class="incorrect" type="radio" name="tornadoes" value="Storm Index"> Storm Index
+                        <input class="correct" type="radio" name="tornadoes" value="Enhanced Fujita Scale"> Enhanced Fujita Scale
+                    </form>
+                    <br>
+                    <form class="question">
+                        Tornado forecasting was banned from official forecasts before 1950.
+                        <br>
+                        <input class="correct" type="radio" name="tornadoes" value="True"> True
+                        <input class="incorrect" type="radio" name="tornadoes" value="False"> False
+                    </form>
+                    <br>
+                    <form class="question">
+                        Record month for most tornadoes since modern record keeping began:?
+                        <br>
+                        <input class="incorrect" type="radio" name="tornadoes" value="May, 1950"> May, 1950
+                        <input class="incorrect" type="radio" name="tornadoes" value="June, 1965"> June, 1965
+                        <input class="incorrect" type="radio" name="tornadoes" value="July, 1971"> July, 1971
+                        <input class="correct" type="radio" name="tornadoes" value="April, 2011"> April, 2011
+                    </form>
+                    <br>
+                    <form class="question">
+                        1996 movie that featured Helen Hunt as a storm chaser researching tornadoes?
+                        <br>
+                        <input class="incorrect" type="radio" name="tornadoes" value="MegaStorm"> MegaStorm
+                        <input class="correct" type="radio" name="tornadoes" value="Twister"> Twister
+                        <input class="incorrect" type="radio" name="tornadoes" value="In Harm's Way"> In Harm's Way
+                        <input class="incorrect" type="radio" name="tornadoes" value="Tornado!"> Tornado!
+                    </form>
+                    <button type="button" id="endButton" class="btn btn-primary btn-lg">Done!</button>
+                   
+                </div>
+
+                <div id="results">
+                    <h2>Results</h2>
+                    <br>
+                    <p id="correctCountDisplay"></p>
+                    <br>
+                    <p id="incorrectCountDisplay"></p>
+                    <br>
+                    <p id="unansweredCountDisplay"></p>
+                </div>
             </div>
         </div>
     </div>
