@@ -1,10 +1,24 @@
 body {
     background-image: url("../images/tornado.jpg");
-    background-size: 1200px, 623px;
-    
+       height: 100%; 
+       /* Center and scale the image nicely */
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
 }
 
+.container {
+    margin-right: 5%;
+}
+.list-group-item {
+    background-color: rgba(255,255,255,0.5)
+}
 
+p {
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1em; 
+}
 
 
 
@@ -18,7 +32,7 @@ body {
 }
 
 #quizBoard {
-    height: 500px;
+    height: 800px;
     text-align: center;
 }
 
@@ -32,3 +46,6 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-family: 'Bangers', cursive;
+}
